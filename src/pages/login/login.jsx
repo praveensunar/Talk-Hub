@@ -31,7 +31,7 @@ const Login = () => {
                 <button type="submit">{currState === "Sign up"?"Create Account":"Login Now"}</button>
                 <div className="login-term">
                     <input type="checkbox"/>
-                    <p>Agree to the ters of use & privacy policy.</p>
+                    <p>Agree to the terms of use & privacy policy.</p>
                 </div>
                 <div className="login-forgot">
                     {currState === "Sign up" ? <p className="login-toggle"> Already have an account <spam onClick ={()=>setCurrState("Login")} >Login here.</spam></p>
