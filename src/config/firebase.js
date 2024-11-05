@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import { createUserWithEmailAndPassword,getAuth,signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword,getAuth,signInWithEmailAndPassword, signOut } from "firebase/auth";
 import {doc , getFirestore, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 
@@ -33,7 +33,7 @@ await setDoc(doc(db,"users",user.uid),{
     lastseen:Date.now()
 })
 await setDoc(doc(db,"chats",user.uid),{
-    chatData:[]
+    chatsData:[]
 })
 }catch(error){
     console.error(error)
@@ -48,5 +48,15 @@ await setDoc(doc(db,"chats",user.uid),{
         toast.error(error.code.split("/")[1].split("-").join(" "))
     }
  }
-export{signup,login}
+
+ const logout = async () => {
+    try{
+    await signOut(auth)
+    }catch(error){
+        console.error(error)
+        toast.error(error.code.split("/")[1].split("-").join(" "))
+    }
+}
+
+export{signup,login,logout,auth,db}
 

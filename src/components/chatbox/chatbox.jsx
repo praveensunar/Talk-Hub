@@ -17,7 +17,7 @@ import assets from '../../assets/assets';
                   <p className='msg'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>  
                 <div>
                 <img src={assets.profile_img} alt="" />
-                <p1>2:23 PM</p1>
+                <p>2:23 PM</p>
                 </div>
                 </div>
 
@@ -25,7 +25,7 @@ import assets from '../../assets/assets';
                   <img className='msg-image' src={assets.pic1} alt=''/> 
                 <div>
                 <img src={assets.profile_img} alt="" />
-                <p1>2:23 PM</p1>
+                <p>2:23 PM</p>
                 </div>
                 </div>
 
@@ -33,7 +33,7 @@ import assets from '../../assets/assets';
                   <p className='msg'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>  
                 <div>
                 <img src={assets.profile_img} alt="" />
-                <p1>2:23 PM</p1>
+                <p>2:23 PM</p>
                 </div>
                 </div>
 
